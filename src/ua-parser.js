@@ -220,6 +220,9 @@
 
         browser : [[
 
+            // Bandyer
+            /(bandyer)\/\S+\/(\S+)\s/i], [NAME, VERSION], [                     // Bandyer SDK
+
             // Presto based
             /(opera\smini)\/([\w\.-]+)/i,                                       // Opera Mini
             /(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,                      // Opera Mobi/Tablet
@@ -419,6 +422,10 @@
         ],
 
         device : [[
+
+            // Bandyer
+            /device\/(\S+)\/([\w,]+)\s?/i],                                     // Bandyer SDK
+            [VENDOR, MODEL], [
 
             /\((ipad|playbook);[\w\s\),;-]+(rim|apple)/i                        // iPad/PlayBook
             ], [MODEL, VENDOR, [TYPE, TABLET]], [
@@ -677,6 +684,9 @@
         ],
 
         engine : [[
+            // Bandyer
+            /(Webrtc)\/(\S+)\s/i],
+            [NAME, VERSION], [                                                  // Bandyer SDK
 
             /windows.+\sedge\/([\w\.]+)/i                                       // EdgeHTML
             ], [VERSION, [NAME, 'EdgeHTML']], [
@@ -696,6 +706,10 @@
         ],
 
         os : [[
+
+            // Bandyer
+            /OS\/([\w ]+)\/(\S+)\s/i],
+            [NAME, VERSION], [                                                  // Bandyer SDK
 
             // Windows based
             /microsoft\s(windows)\s(vista|xp)/i                                 // Windows (iTunes)
