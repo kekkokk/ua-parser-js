@@ -222,6 +222,8 @@
 
             // Bandyer
             /(bandyer)\/\S+\/(\S+)\s/i], [NAME, VERSION], [                     // Bandyer SDK
+            /okhttp\/(\S+)\s?/i], [[NAME, 'Bandyer'], VERSION], [
+            /SDK%20Sample/i], [[NAME, 'Bandyer'], VERSION], [
 
             // Presto based
             /(opera\smini)\/([\w\.-]+)/i,                                       // Opera Mini
@@ -710,6 +712,8 @@
             // Bandyer
             /OS\/([\w ]+)\/(\S+)\s/i],
             [NAME, VERSION], [                                                  // Bandyer SDK
+            /okhttp\//i
+            ], [[NAME, 'android']], [
 
             // Windows based
             /microsoft\s(windows)\s(vista|xp)/i                                 // Windows (iTunes)
